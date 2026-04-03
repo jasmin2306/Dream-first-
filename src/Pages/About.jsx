@@ -66,7 +66,7 @@ const About = () => {
               {/* Item 1 */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img
-                  src="src/WhatsApp Image 2026-04-02 at 5.25.24 PM.jpeg"
+                  src="src/assets/Ayodhya Mandir.jpeg"
                   alt="Offer 1"
                   style={{
                     width: 180,
@@ -86,7 +86,7 @@ const About = () => {
               {/* Item 2 */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img
-                  src="src/WhatsApp Image 2026-04-02 at 5.25.25 PM (1).jpeg"
+                  src="src/assets/Ajmer Shrif.jpeg"
                   alt="Offer 2"
                   style={{
                     width: 180,
@@ -105,7 +105,7 @@ const About = () => {
               {/* Item 3 */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img
-                  src="src/WhatsApp Image 2026-04-02 at 5.25.25 PM.jpeg"
+                  src="src/assets/Status Of Unity.jpeg"
                   alt="Offer 3"
                   style={{
                     width: 180,
@@ -123,7 +123,7 @@ const About = () => {
                     {/* image 4 */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img
-                  src="src/ChatGPT Image Apr 3, 2026, 01_41_37 PM.png"
+                  src="src/assets/Sawariya Mandir.png"
                   alt="Offer 2"
                   style={{
                     width: 180,
