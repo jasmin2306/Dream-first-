@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'InsightNews',
-        short_name: 'InsightNews',
+        name: 'Dream First News',
+        short_name: 'DreamFirst',
         description: 'Real-time News Application',
         theme_color: '#ffffff',
         icons: [

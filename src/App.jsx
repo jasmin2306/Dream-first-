@@ -8,6 +8,7 @@ import Sport from './Component/Sport'
 import Stories from './Component/Stories'
 import Business from './Component/Business'
 import Tech from './Component/Tech'
+import DownloadPage from './Component/DownloadPage'
 const App = () => {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/technology" element={<Tech />} />
             <Route path="/sports" element={<Sport />} />
             <Route path="/stories" element={<Stories />} />
+            <Route path="/download" element={<DownloadPage />} />
           </Routes>
         </main>
         <Footer />

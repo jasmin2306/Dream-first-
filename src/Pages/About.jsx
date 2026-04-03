@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -66,7 +67,7 @@ const About = () => {
               {/* Item 1 */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img
-                  src="src/assets/Ayodhya Mandir.jpeg"
+                  src="src\assets\ayodhya.jpg"
                   alt="Offer 1"
                   style={{
                     width: 180,
@@ -86,7 +87,7 @@ const About = () => {
               {/* Item 2 */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img
-                  src="src/assets/Ajmer Shrif.jpeg"
+                  src="src\assets\ajmer shrif.jpg"
                   alt="Offer 2"
                   style={{
                     width: 180,
@@ -105,7 +106,7 @@ const About = () => {
               {/* Item 3 */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img
-                  src="src/assets/Status Of Unity.jpeg"
+                  src="src\assets\statu.jpg"
                   alt="Offer 3"
                   style={{
                     width: 180,
@@ -123,7 +124,7 @@ const About = () => {
                     {/* image 4 */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img
-                  src="src/assets/Sawariya Mandir.png"
+                  src="src\assets\sanwariya_seth_temple.jpg"
                   alt="Offer 2"
                   style={{
                     width: 180,
