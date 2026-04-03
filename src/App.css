@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.card-text {
+  word-wrap: break-word;
+  white-space: pre-line; /* Isse aapka '\n' (next line) wala data sahi dikhega */
+}
+/* ============================================
+   DREAM FIRST COLOR THEME
+   Logo Colors: Yellow #FFC107, Red #9B1C1C, Black #111111
+   ============================================ */
+
+:root {
+  /* ✅ Logo se liye hue colors */
+  --primary:        #9B1C1C;   /* Deep Red  — logo ka red */
+  --primary-hover:  #7F1D1D;   /* Darker red on hover */
+  --accent:         #FFC107;   /* Golden Yellow — logo ka yellow */
+  --accent-dark:    #D97706;   /* Darker yellow for text */
+  --dark:           #111111;   /* Pure Black — logo ka black */
+  --dark-2:         #1C1C1C;   /* Near black for gradients */
+
+  /* Backgrounds */
+  --bg-page:        #FFFBF0;   /* Warm off-white — yellow ka hint */
+  --bg-card:        #FFFFFF;
+  --bg-light:       #FEF9EE;   /* Very light yellow tint */
+
+  /* Text */
+  --text-dark:      #111111;
+  --text-muted:     #6B6B6B;
+  --white:          #FFFFFF;
+
+  /* Shadows — warm yellow-tinted */
+  --shadow-sm: 0 2px 8px rgba(17,17,17,0.07);
+  --shadow-md: 0 8px 28px rgba(155,28,28,0.12);
+  --shadow-lg: 0 16px 48px rgba(155,28,28,0.16);
+
+  --transition: all 0.28s ease;
+  --radius:     12px;
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .card-title {
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+  height: 70px;
+  background-color: var(--dark) !important;
+  border-bottom: 3px solid var(--accent) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  margin: 20px auto;
+  font-family: sans-serif;
+}
+
+.reward-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.image-box {
+ 
+}
+
+.image-box img {
+ 
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.content-box {
+  margin-left: 15px;
+}
+
+.content-box h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.2;
+}
+
+.premium-text {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.points-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.points-text strong {
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Brand */
+.navbar .navbar-brand {
+  color: var(--accent) !important;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+/* Nav links */
+.navbar .nav-link {
+  color: rgba(255,255,255,0.82) !important;
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: var(--transition);
+  border-radius: 6px;
+  padding: 6px 12px !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--accent) !important;
+  background: rgba(255,193,7,0.12) !important;
+}
+
+/* Search input */
+.navbar .form-control {
+  background: rgba(255,255,255,0.1) !important;
+  border: 1.5px solid rgba(255,193,7,0.35) !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+}
+
+.navbar .form-control::placeholder { color: rgba(255,255,255,0.45) !important; }
+.navbar .form-control:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(255,193,7,0.2) !important;
+  background: rgba(255,255,255,0.15) !important;
+}
+
+/* Search button */
+.navbar .btn-outline-success {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  font-weight: 600;
+  border-radius: 20px !important;
+}
+.navbar .btn-outline-success:hover {
+  background: var(--accent) !important;
+  color: var(--dark) !important;
+}
+
+/* Hamburger toggler */
+.navbar-toggler { border-color: rgba(255,193,7,0.5) !important; }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255%2C193%2C7%2C1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-custom {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-custom:hover {
+  background-color: var(--primary-hover);
+  box-shadow: var(--shadow-md);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Yellow accent button variant */
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--dark);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+.btn-accent:hover {
+  background-color: var(--accent-dark);
+  color: var(--dark);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.news-card {
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius);
+  border: 1px solid rgba(155,28,28,0.08);
+  transition: var(--transition);
+}
+
+.news-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(155,28,28,0.18);
+  transform: translateY(-3px);
+}
+
+/* Card top accent bar */
+.news-card::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* ============================================
+   HERO SECTION (Home page)
+   ============================================ */
+.hero-banner {
+  background: linear-gradient(135deg, var(--dark) 0%, #2D0A0A 40%, var(--primary) 100%) !important;
+  border: 2px solid rgba(255,193,7,0.2);
+}
+
+/* ============================================
+   CATEGORY PAGE HEADERS
+   ============================================ */
+.category-page {
+  background-color: var(--bg-page);
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.category-page h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+.about-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--bg-page);
+  min-height: 100vh;
+}
+
+.about-card-main {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(155,28,28,0.08);
+}
+
+.about-section h1 {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 2.6rem;
+}
+
+.about-section h2 {
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-top: 40px;
+  border-left: 5px solid var(--accent);
+  padding-left: 15px;
+}
+
+/* About list cards */
+.about-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.about-list li {
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,193,7,0.3);
+  transition: var(--transition);
+}
+
+.about-list li:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+}
+
+/* Contact box */
+.contact-box {
+  background: linear-gradient(135deg, var(--dark), #2D0A0A);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 40px;
+  border-left: 4px solid var(--accent);
+}
+
+.contact-box a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-box li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer-section {
+  background-color: var(--dark) !important;
+  border-top: 3px solid var(--accent);
+  margin-top: auto;
+}
+
+.footer-section h5 {
+  color: var(--white) !important;
+}
+
+.footer-section p,
+.footer-section .text-muted {
+  color: rgba(255,255,255,0.55) !important;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.55) !important;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent) !important;
+  padding-left: 5px;
+}
+
+.footer-icon {
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.footer-icon:hover {
+  color: var(--accent) !important;
+  transform: scale(1.2);
+}
+
+/* Newsletter subscribe button in footer */
+.footer-section .btn {
+  background: var(--accent) !important;
+  color: var(--dark) !important;
+  font-weight: 700;
+  border: none !important;
+}
+.footer-section .btn:hover {
+  background: var(--accent-dark) !important;
+}
+
+/* Newsletter input */
+.footer-section .form-control {
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,193,7,0.3) !important;
+  color: #fff !important;
+}
+.footer-section .form-control::placeholder {
+  color: rgba(255,255,255,0.4) !important;
+}
+
+/* Copyright text */
+.footer-section small,
+.footer-section .small {
+  color: rgba(255,255,255,0.35) !important;
+}
+
+/* ============================================
+   BADGES & SOURCE LABELS
+   ============================================ */
+.badge-live {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   SCROLLBAR — branded
+   ============================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-page); }
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent-dark); }
+
+/* ============================================
+   SELECTION COLOR
+   ============================================ */
+::selection {
+  background: var(--accent);
+  color: var(--dark);
+}
