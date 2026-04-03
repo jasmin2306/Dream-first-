@@ -77,8 +77,8 @@ const About = () => {
                   }}
                 />
                 <div>
-                  <h3 style={{ margin: 0, fontSize: '1.2rem' }}>Advertisment </h3>
-                  <p style={{ margin: '8px 0', fontSize: '1rem' }}>4550 points required</p>
+                  <h3 style={{ margin: 0, fontSize: '1.2rem' }}>Ayodhya Mandir</h3>
+                  <p style={{ margin: '8px 0', fontSize: '1rem' }}>5550 points required</p>
                   <p style={{ margin: 0, fontSize: '1rem' }}>Premium membership required</p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ const About = () => {
                 />
                 <div>
                   <h3 style={{ margin: 0, fontSize: '1.2rem' }}>Statue of Unity</h3>
-                  <p style={{ margin: '8px 0', fontSize: '1rem' }}>5550 points required</p>
+                  <p style={{ margin: '8px 0', fontSize: '1rem' }}>4550 points required</p>
                   <p style={{ margin: 0, fontSize: '1rem' }}>Premium membership required</p>
                 </div>
               </div>
