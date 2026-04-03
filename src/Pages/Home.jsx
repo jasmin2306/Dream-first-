@@ -4,16 +4,16 @@ import React from 'react';
 const downloadImage = async (url) => {
   try {
     const response = await fetch(url);
-    const blob = await response.blob(); // Image ko blob mein badalna
+    const blob = await response.blob(); 
     const blobURL = URL.createObjectURL(blob);
     
     const link = document.createElement("a");
     link.href = blobURL;
-    link.download = "InsightNews.apk"; // File ka naam jo aap rakhna chahen
+    link.download = "InsightNews.apk"; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    URL.revokeObjectURL(blobURL); // Memory free karna
+    URL.revokeObjectURL(blobURL); // 
   } catch (error) {
     console.error("Download error:", error);
     alert("CORS issue ya network error ki wajah se download nahi ho saka.");
